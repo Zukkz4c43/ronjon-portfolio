@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ronjon Covita Ibanez - Grade 11 ASSH HOMER Student Portfolio featuring skills, evidence of learning, and SOC Analyst cybersecurity career roadmap.">
+  <title>RONJON | Student Portfolio &bull; Grade 11 ASSH HOMER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="profile.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- PRO CYBER SPLASH SCREEN PRELOADER -->
+  <div id="cyberSplash" class="cyber-splash" role="dialog" aria-modal="true" aria-label="Loading Portfolio">
+    <div class="splash-ambient-bg"></div>
+    <div class="splash-grid-pattern"></div>
+    
+    <div class="splash-container">
+      <!-- Status Badge -->
+      <div class="splash-status-badge">
+        <span class="splash-blink-dot"></span>
+        <span class="splash-status-pill">SOC CYBER DEFENSE HUD // BOOT SEQUENCE</span>
+      </div>
+
+      <!-- Holographic Avatar Frame -->
+      <div class="splash-avatar-frame">
+        <div class="splash-radar-ring ring-outer"></div>
+        <div class="splash-radar-ring ring-inner"></div>
+        <div class="splash-scanline-laser"></div>
+        <img src="profile.png" alt="Ronjon Covita Ibanez" class="splash-avatar-img">
+      </div>
+
+      <!-- Identity Typography -->
+      <div class="splash-brand-block">
+        <div class="splash-brand-title">RONJON</div>
+        <div class="splash-brand-student">RONJON COVITA IBANEZ</div>
+        <div class="splash-brand-meta">
+          <span class="meta-tag">Grade 11 - ASSH HOMER</span>
+          <span class="meta-separator">&bull;</span>
+          <span class="meta-tag cyan">Aspiring SOC Analyst</span>
+        </div>
+      </div>
+
+      <!-- High-Tech Telemetry Progress Bar -->
+      <div class="splash-telemetry-box">
+        <div class="splash-progress-track">
+          <div class="splash-progress-fill" id="splashBar"></div>
+        </div>
+        <div class="splash-info-row">
+          <span class="splash-terminal-msg" id="splashStatus">INITIALIZING SECURITY PROTOCOLS...</span>
+          <span class="splash-percent-num" id="splashPercent">0%</span>
+        </div>
+      </div>
+
+      <!-- Skip Button -->
+      <button class="splash-skip-action" id="splashSkipBtn" type="button">
+        <span>ENTER PORTFOLIO</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Top Realtime Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
+  <!-- Interactive Dynamic Cyber Canvas (Particles & Constellation Grid) -->
+  <canvas id="cyberCanvas" class="cyber-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Background Canvas / Glows -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+  <div class="cyber-radar-sweep" aria-hidden="true"></div>
+
+  <!-- Top Announcement / Live Telemetry Bar -->
+  <div class="status-topbar">
+    <div class="status-content">
+      <div class="telemetry-pill">
+        <span class="status-indicator"></span>
+        <span class="telemetry-text">SOC SYSTEM: ACTIVE</span>
+      </div>
+      <span class="status-divider">&bull;</span>
+      <span class="status-text">Official Student Academic Portfolio &bull; A.Y. 2025–2026</span>
+      <span class="status-divider">&bull;</span>
+      <span class="status-badge">Grade 11 - ASSH HOMER</span>
+      <span class="status-divider">&bull;</span>
+      <div class="live-clock" id="liveClock">LIVE HUD // 00:00:00</div>
+    </div>
+  </div>
+
+  <!-- Floating Pro Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand">
+      <span class="brand-avatar">
+        <img src="profile.png" alt="Ronjon Covita Ibanez" class="nav-avatar-img">
+        <span class="avatar-online-dot" title="Active Student"></span>
+      </span>
+      <span class="brand-text">
+        <strong>RONJON</strong>
+        <small>SOC ANALYST PATH</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-item active">Home</a>
+      <a href="#about" class="nav-item">About Me</a>
+      <a href="#skills" class="nav-item">Skills &amp; Talents</a>
+      <a href="#evidence" class="nav-item">Proof / Evidence</a>
+      <a href="#terminal" class="nav-item">SOC Console</a>
+      <a href="#roadmap" class="nav-item">Roadmap</a>
+      <a href="#goal" class="nav-item">Career Goal</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-sm btn-outline print-btn" id="printBtn" title="Print or save as 2-page PDF">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span>Print / PDF</span>
+      </button>
+      <button class="btn btn-sm btn-outline share-btn" id="shareBtn" title="Copy link to clipboard">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        <span>Share</span>
+      </button>
+      <a href="#about" class="btn btn-sm btn-primary">
+        <span>Explore</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">RONJON &bull; GRADE 11 ASSH HOMER</span>
+            <span class="badge-tag">CYBER CADET</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="gradient-text hero-main-name">RONJON</span>
+            <span class="hero-sub-name">COVITA IBANEZ</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Student Portfolio &bull; <strong>Grade 11 - ASSH HOMER</strong>
+          </p>
+
+          <p class="hero-description">
+            A dedicated, hardworking student striving for academic excellence and pursuing a career pathway as a future <strong>SOC Analyst (Security Operations Center &amp; Cyber Defense)</strong> through discipline, teamwork, and continuous self-improvement.
+          </p>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="hl-number" data-target="6">6+</span>
+              <span class="hl-label">Soft Skills</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="hl-number" data-target="5">5</span>
+              <span class="hl-label">Core Competencies</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="hl-number" data-target="6">6</span>
+              <span class="hl-label">SOC Roadmap Steps</span>
+            </div>
+            <div class="highlight-divider"></div>
+            <div class="highlight-item">
+              <span class="hl-number" data-target="100">100%</span>
+              <span class="hl-label">Diligence Rate</span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#about" class="btn btn-primary">
+              <span>View Student Profile</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5M12 6v12"/></svg>
+            </a>
+            <a href="#roadmap" class="btn btn-glass">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>SOC Career Roadmap</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive 3D Holographic Student ID Card With Profile Photo -->
+        <div class="hero-card-wrapper reveal">
+          <div class="student-card spotlight-card" id="studentCard">
+            <div class="card-glass-shine"></div>
+            <div class="card-corner corner-tl"></div>
+            <div class="card-corner corner-tr"></div>
+            <div class="card-corner corner-bl"></div>
+            <div class="card-corner corner-br"></div>
+
+            <div class="card-header">
+              <div class="card-chip">
+                <span class="chip-metal"></span>
+                <span class="chip-label">DEPED SHS</span>
+              </div>
+              <div class="card-year">
+                <span class="live-pulse"></span>
+                <span>VERIFIED 2026</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="avatar-ring">
+                <div class="avatar-inner">
+                  <img src="profile.png" alt="Ronjon Covita Ibanez" class="avatar-img">
+                </div>
+                <div class="avatar-badge" title="Verified Student">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+              </div>
+
+              <div class="card-info">
+                <h3 class="card-name">RONJON</h3>
+                <p class="card-fullname">Ronjon Covita Ibanez</p>
+                <p class="card-title">Grade 11 Student &bull; Aspiring SOC Analyst</p>
+                <div class="card-section-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  <span>Section: ASSH HOMER</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-meta-grid">
+              <div class="meta-cell">
+                <span class="meta-label">ACADEMIC STATUS</span>
+                <span class="meta-val">Regular Student</span>
+              </div>
+              <div class="meta-cell">
+                <span class="meta-label">CAREER FOCUS</span>
+                <span class="meta-val">SOC Analyst / Cyber</span>
+              </div>
+              <div class="meta-cell">
+                <span class="meta-label">STRENGTH</span>
+                <span class="meta-val">Discipline &amp; Diligence</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="barcode-graphic" aria-label="Barcode simulation">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="card-signature">Ronjon Ibanez</div>
+            </div>
+          </div>
+          <div class="card-reflection"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: ABOUT ME & ACADEMIC GOAL -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span>SECTION 01 &bull; INTRODUCTION</span>
+          </div>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-desc">Get to know my character, personal drive, and academic aspirations.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Bio Card -->
+          <article class="card glass-card spotlight-card bio-card reveal">
+            <div class="card-corner corner-tl"></div>
+            <div class="card-corner corner-br"></div>
+
+            <div class="card-icon-banner">
+              <div class="card-icon cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="banner-badge">Student Reflection</div>
+            </div>
+
+            <h3 class="card-title-lg">Who I Am</h3>
+            <p class="bio-text">
+              "I am a simple and hardworking student who enjoys going to school, learning new things, and spending time with my friends. I may not be perfect, but I always try my best to complete my schoolwork and improve myself."
+            </p>
+
+            <div class="profile-details-grid">
+              <div class="detail-box">
+                <span class="detail-label">Full Name</span>
+                <span class="detail-value">Ronjon Covita Ibanez</span>
+              </div>
+              <div class="detail-box">
+                <span class="detail-label">Current Grade</span>
+                <span class="detail-value">Grade 11</span>
+              </div>
+              <div class="detail-box">
+                <span class="detail-label">Section</span>
+                <span class="detail-value highlight">ASSH HOMER</span>
+              </div>
+              <div class="detail-box">
+                <span class="detail-label">Key Philosophy</span>
+                <span class="detail-value">Continuous Improvement</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Academic Goal Card -->
+          <article class="card glass-card spotlight-card goal-card reveal">
+            <div class="card-corner corner-tr"></div>
+            <div class="card-corner corner-bl"></div>
+
+            <div class="card-icon-banner">
+              <div class="card-icon gold">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div class="banner-badge gold-badge">Academic Vision</div>
+            </div>
+
+            <h3 class="card-title-lg">My Academic Goal</h3>
+            <div class="goal-quote-box">
+              <div class="quote-mark">“</div>
+              <p class="goal-quote">
+                My goal is to finish my studies, get good grades, and become a successful person in the future.
+              </p>
+            </div>
+
+            <div class="goal-milestones">
+              <div class="milestone-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Complete Senior High School with Honors</span>
+              </div>
+              <div class="milestone-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Maintain High Academic Standing &amp; Discipline</span>
+              </div>
+              <div class="milestone-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Pave the Way for BSIT / Cybersecurity Studies</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERESTS, TALENTS & SOFT SKILLS (WITH DYNAMIC FILTER TABS) -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>SECTION 02 &bull; ATTRIBUTES</span>
+          </div>
+          <h2 class="section-title">Interests, Talents &amp; <span class="gradient-text">Soft Skills</span></h2>
+          <p class="section-desc">The passions, creative expressions, and interpersonal values that shape my everyday life.</p>
+
+          <!-- Dynamic Category Tabs -->
+          <div class="filter-tabs" id="attributeTabs">
+            <button class="filter-tab active" data-filter="all">All Attributes</button>
+            <button class="filter-tab" data-filter="interests">My Interests</button>
+            <button class="filter-tab" data-filter="talents">My Talents</button>
+            <button class="filter-tab" data-filter="softskills">Soft Skills</button>
+          </div>
+        </div>
+
+        <div class="tri-grid">
+          <!-- MY INTERESTS -->
+          <article class="card glass-card spotlight-card attribute-card attr-group-interests reveal">
+            <div class="card-icon-header">
+              <div class="card-icon cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <span class="sub-label">PASSIONS</span>
+                <h3>My Interests</h3>
+              </div>
+            </div>
+
+            <ul class="attribute-list">
+              <li class="item-interactive">
+                <div class="item-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Listening to music</strong>
+                  <small>Inspires focus, relaxation, and creative energy</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Watching movies</strong>
+                  <small>Broadens perspectives and storytelling appreciation</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Spending time with friends &amp; family</strong>
+                  <small>Strengthens interpersonal bonds and moral support</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Using social media</strong>
+                  <small>Staying connected, informed, and updated with current trends</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Learning new things</strong>
+                  <small>Cultivating curiosity, adaptability, and modern knowledge</small>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- MY TALENTS -->
+          <article class="card glass-card spotlight-card attribute-card attr-group-talents reveal">
+            <div class="card-icon-header">
+              <div class="card-icon purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div>
+                <span class="sub-label">ABILITIES</span>
+                <h3>My Talents</h3>
+              </div>
+            </div>
+
+            <ul class="attribute-list">
+              <li class="item-interactive">
+                <div class="item-icon-box purple-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="4" r="2"/><path d="m15 22-3-7-3 7"/><path d="M9 13v-3l6-3"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Dancing</strong>
+                  <small>Rhythm, coordination, physical expression, and confidence</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box purple-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Presenting</strong>
+                  <small>Communicating concepts clearly and speaking in front of an audience</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box purple-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Working with classmates</strong>
+                  <small>Fostering unity, active engagement, and collective success</small>
+                </div>
+              </li>
+              <li class="item-interactive">
+                <div class="item-icon-box purple-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <div class="item-text">
+                  <strong>Doing school activities</strong>
+                  <small>Eager participation in group performances and academic tasks</small>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <!-- MY SOFT SKILLS -->
+          <article class="card glass-card spotlight-card attribute-card attr-group-softskills reveal">
+            <div class="card-icon-header">
+              <div class="card-icon emerald">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <span class="sub-label">CHARACTER</span>
+                <h3>My Soft Skills</h3>
+              </div>
+            </div>
+
+            <p class="soft-skills-intro">Core human values that define how I interact, collaborate, and fulfill responsibilities:</p>
+
+            <div class="soft-skills-tags">
+              <div class="soft-tag">
+                <span class="tag-status"></span>
+                <strong>Responsible</strong>
+              </div>
+              <div class="soft-tag">
+                <span class="tag-status"></span>
+                <strong>Friendly</strong>
+              </div>
+              <div class="soft-tag">
+                <span class="tag-status"></span>
+                <strong>Respectful</strong>
+              </div>
+              <div class="soft-tag">
+                <span class="tag-status"></span>
+                <strong>Patient</strong>
+              </div>
+              <div class="soft-tag">
+                <span class="tag-status"></span>
+                <strong>Hardworking</strong>
+              </div>
+              <div class="soft-tag">
+                <span class="tag-status"></span>
+                <strong>Cooperative</strong>
+              </div>
+            </div>
+
+            <div class="soft-skills-callout">
+              <span class="callout-icon">💡</span>
+              <p>These traits form the foundation for both academic achievements and future professional roles as a SOC Analyst in Cybersecurity.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CORE SKILLS OVERVIEW -->
+    <section class="section core-skills-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>SECTION 03 &bull; FOUNDATION</span>
+          </div>
+          <h2 class="section-title">Core Skills <span class="gradient-text">Overview</span></h2>
+          <p class="section-desc">Key competencies developed throughout my high school journey in Grade 11 - ASSH HOMER.</p>
+        </div>
+
+        <div class="core-skills-grid">
+          <!-- Skill 1 -->
+          <div class="core-skill-card spotlight-card reveal">
+            <div class="core-card-top">
+              <div class="core-icon-badge blue-glow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="core-index">01</span>
+            </div>
+            <h3>Teamwork &amp; Cooperation</h3>
+            <p>Collaborating effectively with peers, listening to different perspectives, and uniting towards shared project goals.</p>
+            <div class="competency-meter">
+              <div class="meter-bar" style="--level: 95%;"></div>
+            </div>
+            <div class="meter-meta">
+              <span>Proficiency Level</span>
+              <strong>95% &bull; High Alignment</strong>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="core-skill-card spotlight-card reveal">
+            <div class="core-card-top">
+              <div class="core-icon-badge amber-glow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span class="core-index">02</span>
+            </div>
+            <h3>Time Management</h3>
+            <p>Balancing multiple academic tasks, setting priority lists, meeting deadlines punctually, and honoring schedules.</p>
+            <div class="competency-meter">
+              <div class="meter-bar" style="--level: 90%;"></div>
+            </div>
+            <div class="meter-meta">
+              <span>Proficiency Level</span>
+              <strong>90% &bull; Disciplined</strong>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="core-skill-card spotlight-card reveal">
+            <div class="core-card-top">
+              <div class="core-icon-badge cyan-glow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <span class="core-index">03</span>
+            </div>
+            <h3>Problem-Solving</h3>
+            <p>Analyzing obstacles calmly, finding practical workarounds, and implementing solutions during class exercises.</p>
+            <div class="competency-meter">
+              <div class="meter-bar" style="--level: 88%;"></div>
+            </div>
+            <div class="meter-meta">
+              <span>Proficiency Level</span>
+              <strong>88% &bull; Adaptive</strong>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="core-skill-card spotlight-card reveal">
+            <div class="core-card-top">
+              <div class="core-icon-badge purple-glow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <span class="core-index">04</span>
+            </div>
+            <h3>Basic Computer Skills</h3>
+            <p>Utilizing digital platforms, productivity tools, document formatting, and school research efficiently.</p>
+            <div class="competency-meter">
+              <div class="meter-bar" style="--level: 85%;"></div>
+            </div>
+            <div class="meter-meta">
+              <span>Proficiency Level</span>
+              <strong>85% &bull; Tech-Capable</strong>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="core-skill-card spotlight-card reveal">
+            <div class="core-card-top">
+              <div class="core-icon-badge green-glow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span class="core-index">05</span>
+            </div>
+            <h3>Discipline &amp; Responsibility</h3>
+            <p>Consistently following guidelines, taking personal ownership of assignments, and maintaining moral integrity.</p>
+            <div class="competency-meter">
+              <div class="meter-bar" style="--level: 96%;"></div>
+            </div>
+            <div class="meter-meta">
+              <span>Proficiency Level</span>
+              <strong>96% &bull; Core Strength</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Page 1 delimiter note for print view -->
+        <div class="print-page-marker" aria-hidden="true">
+          <span>Ronjon Covita Ibanez — Student Portfolio &bull; Page 1 of 2</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SKILLS & PROJECTS: PROOF / EVIDENCE -->
+    <section id="evidence" class="section evidence-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span>SECTION 04 &bull; VERIFICATION</span>
+          </div>
+          <h2 class="section-title">Skills &amp; Projects: <span class="gradient-text">Proof / Evidence</span></h2>
+          <p class="section-desc">
+            "As a student, I participate in different activities and projects at school. These activities help me learn new things, work with my classmates, and become more responsible."
+          </p>
+        </div>
+
+        <div class="evidence-grid">
+          <!-- Evidence 1: Teamwork and Cooperation -->
+          <article class="card glass-card spotlight-card evidence-card reveal">
+            <div class="evidence-badge-bar">
+              <span class="badge-index">EVIDENCE 01</span>
+              <span class="badge-category blue">Collaborative Group Project</span>
+            </div>
+
+            <div class="evidence-content-block">
+              <div class="evidence-icon-header">
+                <div class="evidence-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h3 class="evidence-title">1. Teamwork and Cooperation</h3>
+                  <p class="evidence-subtitle">Group Dynamics &amp; Task Execution</p>
+                </div>
+              </div>
+
+              <div class="evidence-quote-box">
+                <p>
+                  "Participated actively in a group activity where we shared ideas, divided the tasks fairly, and helped each other complete our project. I communicated with my group members and cooperated to make sure we finished our work successfully and on time."
+                </p>
+              </div>
+
+              <div class="evidence-pillars">
+                <div class="pillar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Active Idea Sharing &amp; Brainstorming</span>
+                </div>
+                <div class="pillar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Fair Task Division &amp; Accountability</span>
+                </div>
+                <div class="pillar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Clear Communication &amp; On-Time Delivery</span>
+                </div>
+              </div>
+
+              <div class="evidence-tags">
+                <span>#Teamwork</span>
+                <span>#Cooperation</span>
+                <span>#ClassActivities</span>
+                <span>#Communication</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Evidence 2: Discipline and Responsibility -->
+          <article class="card glass-card spotlight-card evidence-card reveal">
+            <div class="evidence-badge-bar">
+              <span class="badge-index">EVIDENCE 02</span>
+              <span class="badge-category emerald">Academic Integrity &amp; Diligence</span>
+            </div>
+
+            <div class="evidence-content-block">
+              <div class="evidence-icon-header">
+                <div class="evidence-icon-box emerald-bg">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <h3 class="evidence-title">2. Discipline and Responsibility</h3>
+                  <p class="evidence-subtitle">Task Compliance &amp; Self-Management</p>
+                </div>
+              </div>
+
+              <div class="evidence-quote-box">
+                <p>
+                  "I showed discipline and responsibility by completing my assigned school tasks on time and following the instructions given by my teacher. I made sure to manage my time properly and take responsibility for my work."
+                </p>
+              </div>
+
+              <div class="evidence-pillars">
+                <div class="pillar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Following Teacher Guidelines Exactly</span>
+                </div>
+                <div class="pillar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Punctual Assignment Submissions</span>
+                </div>
+                <div class="pillar">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Personal Accountability &amp; Ownership</span>
+                </div>
+              </div>
+
+              <div class="evidence-tags">
+                <span>#Discipline</span>
+                <span>#Responsibility</span>
+                <span>#TimeManagement</span>
+                <span>#Punctuality</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE SOC CYBER OPERATIONS CONSOLE -->
+    <section id="terminal" class="section terminal-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            <span>INTERACTIVE SOC CONSOLE</span>
+          </div>
+          <h2 class="section-title">Cyber Operations <span class="gradient-text">Terminal</span></h2>
+          <p class="section-desc">Experience a live simulated Security Operations Center diagnostics console showcasing my academic readiness.</p>
+        </div>
+
+        <div class="soc-terminal-container reveal">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">RONJON-SOC-DEFENSE-TERMINAL // v2.6.0</div>
+            <div class="terminal-actions">
+              <button class="terminal-btn" id="runScanBtn">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>RUN INTEGRITY SCAN</span>
+              </button>
+            </div>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <p class="term-line"><span class="term-prompt">[RONJON@CYBER-DEFENSE ~]$</span> initialize --student-profile</p>
+            <p class="term-line term-success"><span class="term-check">✔</span> STUDENT IDENTIFIER: Ronjon Covita Ibanez</p>
+            <p class="term-line term-info"><span class="term-arrow">➜</span> STRAND &amp; SECTION: Grade 11 - ASSH HOMER (DepEd SHS)</p>
+            <p class="term-line term-info"><span class="term-arrow">➜</span> CAREER PATHWAY: Security Operations Center (SOC) Analyst &amp; Blue Team Defender</p>
+            <p class="term-line term-info"><span class="term-arrow">➜</span> SYSTEM COMPLIANCE: 100% On-Time Assignment Delivery &bull; High Integrity</p>
+            <p class="term-line term-highlight"><span class="term-radar">●</span> DEFENSE STATUS: VIGILANT &bull; Ready for Higher Studies in Cybersecurity</p>
+            <p class="term-line term-cursor"><span class="term-prompt">[RONJON@CYBER-DEFENSE ~]$</span> <span class="blinking-cursor">_</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CAREER ROAD MAP - SOC ANALYST PATHWAY -->
+    <section id="roadmap" class="section roadmap-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>SECTION 05 &bull; CAREER PATHWAY</span>
+          </div>
+          <h2 class="section-title">My Career <span class="gradient-text">Road Map</span></h2>
+          <p class="section-desc">
+            The Road to Becoming a SOC Analyst &bull; Security Operations Center &amp; Cyber Defense Pathway
+          </p>
+        </div>
+
+        <div class="roadmap-timeline">
+          <!-- Step 1 -->
+          <div class="timeline-step reveal" data-step="1">
+            <div class="step-marker">
+              <span class="step-num">1</span>
+              <div class="step-pulse"></div>
+            </div>
+            <div class="step-card spotlight-card">
+              <div class="step-header">
+                <span class="step-stage">FOUNDATION STAGE</span>
+                <span class="step-badge active">CURRENT MILESTONE</span>
+              </div>
+              <h3 class="step-title">1. Finish Senior High School</h3>
+              <p class="step-description">
+                "I will study hard, excel in Grade 11 - ASSH HOMER, complete my senior high school education, and strengthen my basic computer literacy and problem-solving skills."
+              </p>
+              <div class="step-meta">
+                <span>Grade 11 &bull; ASSH HOMER</span>
+                <span>Academic Diligence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step reveal" data-step="2">
+            <div class="step-marker">
+              <span class="step-num">2</span>
+            </div>
+            <div class="step-card spotlight-card">
+              <div class="step-header">
+                <span class="step-stage">HIGHER EDUCATION</span>
+                <span class="step-badge">COLLEGE DEGREE</span>
+              </div>
+              <h3 class="step-title">2. Take an IT or Computer Science Degree</h3>
+              <p class="step-description">
+                "I will enroll in a college degree program such as BS Information Technology (BSIT) or BS Computer Science (BSCS) with a focus on networks, operating systems, and cybersecurity fundamentals."
+              </p>
+              <div class="step-meta">
+                <span>BSIT / BSCS Degree</span>
+                <span>Core Computing &amp; Systems</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step reveal" data-step="3">
+            <div class="step-marker">
+              <span class="step-num">3</span>
+            </div>
+            <div class="step-card spotlight-card">
+              <div class="step-header">
+                <span class="step-stage">TECHNICAL MASTERY</span>
+                <span class="step-badge">HANDS-ON SKILLS</span>
+              </div>
+              <h3 class="step-title">3. Master Networking &amp; Cyber Defense Fundamentals</h3>
+              <p class="step-description">
+                "I will study computer networks (TCP/IP protocols, DNS, firewalls), master Linux and Windows administration, and practice hands-on security labs using TryHackMe, Hack The Box, and Packet Tracer."
+              </p>
+              <div class="step-meta">
+                <span>TCP/IP &amp; Linux OS</span>
+                <span>Hands-On Cyber Labs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step reveal" data-step="4">
+            <div class="step-marker">
+              <span class="step-num">4</span>
+            </div>
+            <div class="step-card spotlight-card">
+              <div class="step-header">
+                <span class="step-stage">INDUSTRY CREDENTIALS</span>
+                <span class="step-badge">CERTIFICATIONS</span>
+              </div>
+              <h3 class="step-title">4. Earn Industry Cybersecurity Certifications</h3>
+              <p class="step-description">
+                "I will study for and achieve recognized entry-level cybersecurity certifications such as CompTIA Security+, Cisco Certified Support Technician (CCST) Cybersecurity, or CompTIA CySA+."
+              </p>
+              <div class="step-meta">
+                <span>CompTIA Security+ / CySA+</span>
+                <span>Cisco Cybersecurity</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step reveal" data-step="5">
+            <div class="step-marker">
+              <span class="step-num">5</span>
+            </div>
+            <div class="step-card spotlight-card">
+              <div class="step-header">
+                <span class="step-stage">PROFESSIONAL PREPARATION</span>
+                <span class="step-badge">INTERNSHIP &amp; LABS</span>
+              </div>
+              <h3 class="step-title">5. Gain Hands-On SIEM &amp; SOC Lab Experience</h3>
+              <p class="step-description">
+                "I will practice analyzing security logs using SIEM tools (Splunk, Elastic, Microsoft Sentinel), investigate simulated threats, and apply for cybersecurity internships or junior analyst roles."
+              </p>
+              <div class="step-meta">
+                <span>SIEM Tools (Splunk / Sentinel)</span>
+                <span>Incident Monitoring &amp; Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="timeline-step reveal" data-step="6">
+            <div class="step-marker golden">
+              <span class="step-num">6</span>
+            </div>
+            <div class="step-card spotlight-card golden-card">
+              <div class="step-header">
+                <span class="step-stage golden-text">CAREER MILESTONE</span>
+                <span class="step-badge golden-badge">GOAL REACHED</span>
+              </div>
+              <h3 class="step-title">6. Become a Certified SOC Analyst</h3>
+              <p class="step-description">
+                "My goal is to work as a responsible, vigilant, and skilled SOC Analyst&mdash;monitoring real-time threat detection systems, defending networks against cyber attacks, and securing digital infrastructure."
+              </p>
+              <div class="step-meta">
+                <span>Tier 1/2 SOC Analyst</span>
+                <span>Blue Team Cyber Defender</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: ULTIMATE CAREER GOAL -->
+    <section id="goal" class="section ultimate-goal-section">
+      <div class="container">
+        <div class="ultimate-card spotlight-card reveal">
+          <div class="ultimate-ambient"></div>
+          <div class="card-corner corner-tl"></div>
+          <div class="card-corner corner-tr"></div>
+          <div class="card-corner corner-bl"></div>
+          <div class="card-corner corner-br"></div>
+          
+          <div class="ultimate-icon-top">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/><line x1="12" y1="14" x2="12" y2="17"/></svg>
+          </div>
+
+          <span class="ultimate-badge">CYBER DEFENDER &bull; MY NORTH STAR</span>
+          <h2 class="ultimate-title">Ultimate Career Goal</h2>
+
+          <div class="quote-display">
+            <p class="quote-text">
+              &ldquo;I want to become a successful SOC Analyst, defend organizations and systems from cyber threats, support my family, and build a better future through hard work, continuous learning, and dedication.&rdquo;
+            </p>
+          </div>
+
+          <div class="student-author-signature">
+            <div class="author-avatar">
+              <img src="profile.png" alt="Ronjon Covita Ibanez" class="author-img">
+            </div>
+            <div class="author-details">
+              <strong>Ronjon Covita Ibanez</strong>
+              <small>Grade 11 - ASSH HOMER &bull; Aspiring SOC Analyst &amp; Cyber Defender</small>
+            </div>
+          </div>
+
+          <div class="ultimate-actions">
+            <button class="btn btn-primary print-btn-callout">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>Print Official 2-Page Portfolio</span>
+            </button>
+            <a href="#home" class="btn btn-glass">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+              <span>Back to Top</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Print Footer marker for page 2 -->
+        <div class="print-page-marker" aria-hidden="true">
+          <span>Ronjon Covita Ibanez &mdash; Student Portfolio &bull; Page 2 of 2</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="brand footer-brand">
+          <span class="brand-avatar">
+            <img src="profile.png" alt="Ronjon Covita Ibanez" class="nav-avatar-img">
+          </span>
+          <span class="brand-text">
+            <strong>RONJON</strong>
+            <small>RONJON COVITA IBANEZ &bull; GRADE 11 - ASSH HOMER</small>
+          </span>
+        </div>
+        <p class="footer-tagline">
+          Crafted with care to present academic diligence, authentic evidence of learning, and future cybersecurity career readiness.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-pills">
+          <span class="pill-item">Grade 11 - ASSH HOMER</span>
+          <span class="pill-item">Aspiring SOC Analyst</span>
+          <span class="pill-item">Page 1 &amp; 2 Complete</span>
+        </div>
+        <p class="copyright">
+          &copy; 2026 Ronjon Covita Ibanez. All Rights Reserved. Student Academic Portfolio.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
